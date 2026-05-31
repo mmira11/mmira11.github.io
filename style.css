@@ -248,7 +248,7 @@ section.visible {
     }
 
     .btn {
-        display: block;
+        display: inline-block;
         text-align: center;
         margin-bottom: 0.75rem;
     }
