@@ -170,6 +170,7 @@ section.visible {
     border: 1px solid #e31937;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: inline-block;
 }
 
 .project-card h3 {
@@ -210,4 +211,5 @@ section.visible {
     background-color: #1a1a1a;
     color: #aaa;
     border: 1px solid #333;
+    display: inline-block;
 }
