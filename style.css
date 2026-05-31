@@ -215,7 +215,7 @@ section.visible {
 }
 
 .project-tag.in-dev {
-    background-color: #0a1a0f;
-    color: #2ecc71;
-    border: 1px solid #2ecc71;
+    background-color: #0a1a0f !important;
+    color: #2ecc71 !important;
+    border: 1px solid #2ecc71 !important;
 }
