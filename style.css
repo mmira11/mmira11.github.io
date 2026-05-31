@@ -235,15 +235,15 @@ section.visible {
     }
 
     #hero {
-        padding-top 6rem;
+        padding-top: 6rem;
         padding-bottom: 6rem;
     }
 
     #hero h1 {
-        font-szie: 2rem;
+        font-size: 2rem;
     }
 
-    Section {
+    section {
         padding: 1.25rem;
     }
 
@@ -252,4 +252,16 @@ section.visible {
         text-align: center;
         margin-bottom: 0.75rem;
     }
+}
+
+/* -- Secondary button -- */
+.btn-secondary {
+    border-color: #555;
+    color: #aaa;
+    margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    color: #fff;
 }
