@@ -213,3 +213,9 @@ section.visible {
     border: 1px solid #333;
     display: inline-block;
 }
+
+.project-tag.in-dev {
+    background-color: #0a1a0f;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
