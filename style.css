@@ -138,3 +138,76 @@ section.visible {
     font-size: 0.95rem;
     color: #ccc;
 }
+
+/* -- Projects -- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover {
+    border-color: #e31937;
+}
+
+.project-header {
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background-color: #1a0a0a;
+    color: #e31937;
+    border: 1px solid #e31937;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #f0f0f0;
+}
+
+.project-company {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+}
+
+.project-details li {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-stack span {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #aaa;
+    border: 1px solid #333;
+}
