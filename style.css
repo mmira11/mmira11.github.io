@@ -265,3 +265,21 @@ section.visible {
     background-color: #555;
     color: #fff;
 }
+
+.project-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #e31937;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+.project-tag.personal {
+    background-color: #0a0f1a;
+    color: #4a9eff;
+    border: 1px solid #4a9eff;
+}
