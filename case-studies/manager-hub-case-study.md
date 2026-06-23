@@ -40,4 +40,4 @@ HTML / CSS / JavaScript (no framework) · a lightweight local HTTP server · str
 
 ---
 
-*All figures, company names, and screenshots referenced above are fabricated for illustration. See the [Atlas Motors demo](#) for a working clean-room rebuild of the Command Center, Scoreboard, and OEE views described here.*
+*All figures, company names, and screenshots referenced above are fabricated for illustration. See the [Atlas Motors demo](https://mmira11.github.io/atlas-motors-dashboard/) for a working clean-room rebuild of the Command Center, Scoreboard, and OEE views described here. ([Source code](https://github.com/mmira11/atlas-motors-dashboard))*
