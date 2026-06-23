@@ -21,18 +21,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 sections.forEach(section => observer.observe(section));
-
-// -- Typed greeting in the hero --
-const tagline = document.querySelector('#hero p');
-const message = "I build things that work - on the factory floor and on the screen.";
-tagline.textContent = '';
-
-let i = 0;
-function type() {
-    if (i < message.length) {
-        tagline.textContent += message[i];
-        i++;
-        setTimeout(type, 35);
-    }
-}
-type();
