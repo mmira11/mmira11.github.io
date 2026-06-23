@@ -40,6 +40,30 @@
 
             <div class="project-card">
                 <div class="project-header">
+                    <span class="project-tag personal">Personal</span>
+                </div>
+                <h3>Tanda Manager</h3>
+                <p>A mobile-first PWA for running a rotating savings group - replaces a group chat full of payment reminders with a single source of truth everyone can check.</p>
+                <ul class="project-details">
+                    <li>PIN-gated admin dashboard plus a public, no-login board with separate trust boundaries - the public view never receives phone numbers</li>
+                    <li>One-tap SMS / WhatsApp payment reminders with pre-filled messages</li>
+                    <li>Zero backend by design - localStorage persistence with JSON export/import for backup, installable as a PWA</li>
+                    <li>Vitest test suite covering state transitions, round-date logic, and message-link generation</li>
+                </ul>
+                <div class="project-stack">
+                    <span>React</span>
+                    <span>Vite</span>
+                    <span>Tailwind</span>
+                    <span>React Router</span>
+                    <span>Vitest</span>
+                    <span>PWA</span>
+                </div>
+                <a href="https://mmira11.github.io/tanda-manager" class="project-link" target="_blank">View Live →</a>
+                <a href="https://github.com/mmira11/tanda-manager" class="project-link" target="_blank">View Code →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
                     <span class="project-tag">Production</span>
                 </div>
                 <h3>GA3 Manufacturing Automation Suite</h3>
@@ -57,6 +81,7 @@
                     <span>MCP</span>
                     <span>Bash</span>
                 </div>
+                <p class="project-note">Internal Tesla tool - not publicly available</p>
             </div>
 
             <div class="project-card">
@@ -79,26 +104,7 @@
                     <span>MCP</span>
                     <span>JSON</span>
                 </div>
-
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-tag personal">Personal</span>
-                </div>
-                <h3>Shift Countdown</h3>
-                <p>A real shift countdown web app with a circular progress ring, elapsed time tracking, and automatic completion detection.</p>
-                <ul class="project-details">
-                    <li>Configurable shift length and start time inputs</li>
-                    <li>Live updating ring, countdown, percentage, and elapsed time</li>
-                    <li>Turns green when shift is complete</li>
-                </ul>
-                <div class="project-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://mmira11.github.io/shift-timer" class="project-link" target="_blank">View Live →</a>
+                <p class="project-note">Internal Tesla tool - sanitized case study coming soon</p>
             </div>
 
             <div class="project-card">
@@ -107,10 +113,10 @@
                 </div>
                 <h3>Supervisor Scorecard</h3>
                 <p class="project-company">Personal Project · Tesla Inspired</p>
-                <p>A weekly tracking dashbaord for managing supervisor performance across safety, quality, and attendande - built for real shift operations.</p>
+                <p>A weekly tracking dashboard for managing supervisor performance across safety, quality, and attendance - built for real shift operations.</p>
                 <ul class="project-details">
                     <li>Inline editable cells with color coded green, yellow, and red badges per metric</li>
-                    <li>Add and remove supervisors dynmatically with leave status tracking</li>
+                    <li>Add and remove supervisors dynamically with leave status tracking</li>
                     <li>Weekly history saved to localStorage - review any past week instantly</li>
                 </ul>
                 <div class="project-stack">
@@ -130,10 +136,12 @@
         <ul class="skills-list">
             <li>HTML &amp; CSS</li>
             <li>JavaScript</li>
+            <li>React</li>
             <li>Python</li>
-            <li>Git &amp; Github</li>
-            <li>Team Leadership</li>
-            <li>Process Automation</li>
+            <li>Git &amp; GitHub</li>
+            <li>Vite</li>
+            <li>Tailwind CSS</li>
+            <li>localStorage / PWA</li>
         </ul>
     </section>
 
