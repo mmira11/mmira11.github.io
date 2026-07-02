@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Miramontes - Portfolio</title>
+    <meta name="description" content="Portfolio of Miguel Miramontes - U.S. Army veteran and Tesla manufacturing manager building automation tools and web apps. Projects, case studies, and contact info.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Miguel Miramontes - Portfolio">
+    <meta property="og:description" content="Army vet and Tesla manufacturing manager building automation tools and web apps.">
+    <meta property="og:url" content="https://mmira11.github.io/">
+    <meta property="og:image" content="https://mmira11.github.io/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css" />
  </head>
  <body>
@@ -13,9 +21,9 @@
             <span class="logo">Miguel Miramontes</span>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -71,8 +79,7 @@
                 <p>Built 8 automated skills running on scheduled loops against live factory production data - daily digest, midshift monitor, alert checker, upstream watch, end-of-shift brief, and weekly scorecard.</p>
                 <ul class="project-details">
                     <li>Integrated approved internal data sources to automate operational reporting and shift visibility</li>
-                    <li>Recognized as highest Claude Code user in Tesla manufacturing operations</li>
-                    <li>Selected by Manufacturing Agentic AI team to provide comparative evaluation of AI tools for factory workflows</li>
+                    <li>Recognized by Tesla's Manufacturing Agentic AI team and selected to provide a comparative evaluation of AI tools for factory workflows</li>
                 </ul>
                 <div class="project-stack">
                     <span>Claude Code</span>
@@ -104,7 +111,8 @@
                     <span>MCP</span>
                     <span>JSON</span>
                 </div>
-                <a href="https://github.com/mmira11/mmira11.github.io/blob/main/case-studies/manager-hub.md" class="project-link" target="_blank">View Case Study →</a>
+                <a href="case-studies/manager-hub.html" class="project-link">View Case Study →</a>
+                <a href="https://mmira11.github.io/atlas-motors-dashboard/" class="project-link" target="_blank">View Live Demo →</a>
             </div>
 
             <div class="project-card">
@@ -133,27 +141,36 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>HTML &amp; CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Python</li>
-            <li>Git &amp; GitHub</li>
-            <li>Vite</li>
-            <li>Tailwind CSS</li>
-            <li>localStorage / PWA</li>
-        </ul>
+        <div class="skills-group">
+            <h3>Shipping with</h3>
+            <ul class="skills-list">
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Git &amp; GitHub</li>
+                <li>Vite</li>
+                <li>Tailwind CSS</li>
+                <li>localStorage / PWA</li>
+            </ul>
+        </div>
+        <div class="skills-group">
+            <h3>Currently learning</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+            </ul>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Want to connect? Reach me on Github or LinkedIn.</p>
+        <p>Want to connect? Email me or reach out on GitHub or LinkedIn.</p>
+        <a href="mailto:mmiramontes2011@gmail.com" class="btn">Email</a>
         <a href="https://linkedin.com/in/miguel-miramontes-366155194" class="btn">LinkedIn</a>
-        <a href="https://github.com/mmira11" class="btn">Github</a>
+        <a href="https://github.com/mmira11" class="btn">GitHub</a>
     </section>
 
     <footer>
-        <p>Built by Miguel Miramontes · 2026</p>
+        <p>Built by Miguel Miramontes · <span id="year">2026</span></p>
     </footer>
 
     <script src="script.js"></script>
