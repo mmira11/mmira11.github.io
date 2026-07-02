@@ -10,7 +10,7 @@ I built a single-pane-of-glass dashboard to do that stitching automatically: pul
 
 ## What it does
 
-The real tool runs entirely offline on a work laptop — no internet dependency, no cloud service, nothing that can go down if the network does. It's a single-page front end (roughly 4,800 lines of HTML/CSS/JS) backed by a lightweight local server (around 1,400 lines), reading and writing 16 structured data files. It covers 11 operational views: a command-center overview, rate-and-pace tracking, quality detail, supervisor roll-up, attendance, safety, team roster, shift passdown notes, and equipment status, refreshing every 60 seconds.
+The real tool runs entirely offline on a work laptop — no internet dependency, no cloud service, nothing that can go down if the network does. It's a single-page front end (roughly 4,800 lines of HTML/CSS/JS) backed by a lightweight local server (around 1,400 lines), reading and writing 16 structured data files. It covers nine operational views — a command-center overview, rate-and-pace tracking, quality detail, supervisor roll-up, attendance, safety, team roster, shift passdown notes, and equipment status — refreshing every 60 seconds.
 
 The screenshots and demo referenced in this write-up are from a clean-room rebuild — same architecture, same logic, entirely fabricated company and data — built specifically so this case study could include working visuals without exposing anything real.
 

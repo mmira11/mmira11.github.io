@@ -1,15 +1,8 @@
-// -- Smooth scroll for nav links --
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
+// Flag that JS is running - the fade-in styles only apply to body.js,
+// so the page stays fully visible when JS is disabled or fails to load
+document.body.classList.add('js');
 
-// --Fade in sections as you scroll --
+// -- Fade in sections as you scroll --
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver((entries) => {
@@ -21,3 +14,9 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 sections.forEach(section => observer.observe(section));
+
+// -- Keep the footer year current --
+const year = document.getElementById('year');
+if (year) {
+    year.textContent = new Date().getFullYear();
+}

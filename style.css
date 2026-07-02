@@ -5,9 +5,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Deep red for fills and borders, brighter red for text on dark */
+    --red: #e31937;
+    --red-text: #ff4d5d;
+    --bg: #0d0d0d;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0d0d0d;
+    background-color: var(--bg);
     color: #f0f0f0;
     line-height: 1.7;
 }
@@ -25,7 +37,7 @@ nav {
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
-    background-color: #0d0d0d;
+    background-color: var(--bg);
     border-bottom: 1px solid #222;
     z-index: 100;
 }
@@ -33,7 +45,7 @@ nav {
 .logo {
     font-weight: 700;
     font-size: 1.1rem;
-    color: #e31937;
+    color: var(--red-text);
 }
 
 nav ul {
@@ -56,13 +68,13 @@ nav ul a:hover {
 section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
 }
 
 /* -- Hero -- */
 #hero {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
 }
 
 #hero h1 {
@@ -81,22 +93,22 @@ section {
 h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #e31937;
+    color: var(--red-text);
 }
 
 /* -- Button -- */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.75rem;
-    border: 1px solid #e31937;
-    color: #e31937;
+    border: 1px solid var(--red);
+    color: var(--red-text);
     border-radius: 4px;
     font-size: 0.95rem;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .btn:hover {
-    background-color: #e31937;
+    background-color: var(--red);
     color: #fff;
 }
 
@@ -109,29 +121,43 @@ footer {
     border-top: 1px solid #222;
 }
 
-/* -- Fade in on scroll -- */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
+/* -- Fade in on scroll (only when JS is running, and motion is OK) -- */
+@media (prefers-reduced-motion: no-preference) {
+    body.js section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    body.js section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* -- Skills -- */
-#skills ul {
-    list-style: none !important;
+.skills-group {
+    margin-bottom: 2rem;
+}
+
+.skills-group h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 0.75rem;
+}
+
+.skills-list {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
 }
 
-#skills ul li {
-    list-style: none !important;
+.skills-list li {
     padding: 0.5rem 1.25rem;
     border: 1px solid #555;
     border-radius: 4px;
@@ -140,10 +166,21 @@ section.visible {
 }
 
 /* -- Projects -- */
+#projects {
+    max-width: 1100px;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
 }
 
 .project-card {
@@ -154,7 +191,7 @@ section.visible {
 }
 
 .project-card:hover {
-    border-color: #e31937;
+    border-color: var(--red);
 }
 
 .project-header {
@@ -166,8 +203,8 @@ section.visible {
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     background-color: #1a0a0a;
-    color: #e31937;
-    border: 1px solid #e31937;
+    color: var(--red-text);
+    border: 1px solid var(--red);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: inline-block;
@@ -215,9 +252,15 @@ section.visible {
 }
 
 .project-tag.in-dev {
-    background-color: #0a1a0f !important;
-    color: #2ecc71 !important;
-    border: 1px solid #2ecc71 !important;
+    background-color: #0a1a0f;
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.project-tag.personal {
+    background-color: #0a0f1a;
+    color: #4a9eff;
+    border-color: #4a9eff;
 }
 
 /* -- Mobile -- */
@@ -235,8 +278,8 @@ section.visible {
     }
 
     #hero {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
     }
 
     #hero h1 {
@@ -244,7 +287,7 @@ section.visible {
     }
 
     section {
-        padding: 1.25rem;
+        padding: 2rem 1.25rem;
     }
 
     .btn {
@@ -271,18 +314,12 @@ section.visible {
     margin-top: 1.25rem;
     margin-right: 1.25rem;
     font-size: 0.9rem;
-    color: #e31937;
+    color: var(--red-text);
     transition: color 0.2s;
 }
 
 .project-link:hover {
     color: #fff;
-}
-
-.project-tag.personal {
-    background-color: #0a0f1a;
-    color: #4a9eff;
-    border: 1px solid #4a9eff;
 }
 
 /* -- Internal-project note -- */
@@ -291,4 +328,81 @@ section.visible {
     font-size: 0.85rem;
     font-style: italic;
     color: #777;
+}
+
+/* -- Case study page -- */
+.case-study {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.case-study h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 1.5rem 0;
+}
+
+.case-study h2 {
+    font-size: 1.4rem;
+    margin: 2.5rem 0 1rem;
+}
+
+.case-study p,
+.case-study li {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.case-study ul {
+    padding-left: 1.25rem;
+}
+
+.case-study strong {
+    color: #f0f0f0;
+}
+
+.case-study blockquote {
+    border-left: 3px solid var(--red);
+    padding: 0.75rem 1.25rem;
+    margin: 1.5rem 0;
+    background-color: #141414;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.case-study blockquote p {
+    margin-bottom: 0;
+}
+
+.case-study a {
+    color: var(--red-text);
+}
+
+.case-study a:hover {
+    color: #fff;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #f0f0f0;
+}
+
+.case-study hr {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 2.5rem 0;
+}
+
+.case-study .fine-print {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #999;
 }
